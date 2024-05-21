@@ -37,5 +37,5 @@ yarn-error.log*
 next-env.d.ts
 
 # others file
-.history
-package-lock.json
+.history/
+package-lock.json/
