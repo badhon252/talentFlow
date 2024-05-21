@@ -1,0 +1,53 @@
+// prisma/schema.prisma
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  password  String
+  role      Role      @default(CANDIDATE)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  jobs      Job[]     @relation("postedBy")
+  applications Application[] @relation("appliedBy")
+}
+
+model Job {
+  id          Int          @id @default(autoincrement())
+  title       String
+  description String
+  location    String
+  type        String
+  company     String
+  createdBy   User         @relation("postedBy", fields: [createdById], references: [id])
+  createdById Int
+  applications Application[] @relation("forJob")
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model Application {
+  id          Int      @id @default(autoincrement())
+  job         Job      @relation("forJob", fields: [jobId], references: [id])
+  jobId       Int
+  candidate   User     @relation("appliedBy", fields: [candidateId], references: [id])
+  candidateId Int
+  resume      String
+  coverLetter String?
+  status      String   @default("pending")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum Role {
+  EMPLOYER
+  CANDIDATE
+}
