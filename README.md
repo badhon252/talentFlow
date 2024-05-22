@@ -68,18 +68,17 @@ Create a .env file in the root directory with the following variables:
 
 makefile
 
-````DATABASE_URL=your_postgresql_url
-JWT_SECRET=your_jwt_secret ```
+`DATABASE_URL=your_postgresql_url
+JWT_SECRET=your_jwt_secret`
 
 Set up the database:
 
-
-```npx prisma migrate dev --name init
-npx prisma db seed```
+`npx prisma migrate dev --name init
+npx prisma db seed`
 
 Start the development server:
 
-``` npm run dev```
+` npm run dev`
 
     The application should now be running on http://localhost:3000/
 
@@ -87,7 +86,7 @@ Start the development server:
 
 The project adheres to a structured organization to ensure maintainability and scalability:
 
-```
+`
 job-board-platform/
 ├── prisma/ # Prisma schema and migrations
 ├── public/ # Public assets
@@ -104,19 +103,20 @@ job-board-platform/
 ├── jest.config.js # Jest configuration
 ├── next.config.js # Next.js configuration
 └── ... # Other root-level directories and files
-```
+
+`
 
 ###Usage
 
-    Register and Login:
-        Navigate to the registration page to create an account as an employer or candidate.
-        Log in to access the respective dashboards.
-    Employer Dashboard:
-        Post new job listings, edit existing ones, and manage applications effortlessly.
-    Candidate Dashboard:
-        Browse job listings, apply for positions, and monitor application status seamlessly.
-    Notifications:
-        Stay updated with real-time email notifications for important updates and events.
+Register and Login:
+-Navigate to the registration page to create an account as an employer or candidate.
+-Log in to access the respective dashboards.
+Employer Dashboard:
+-Post new job listings, edit existing ones, and manage applications effortlessly.
+Candidate Dashboard:
+-Browse job listings, apply for positions, and monitor application status seamlessly.
+Notifications:
+-Stay updated with real-time email notifications for important updates and events.
 
 ##Testing
 Unit Tests
@@ -124,9 +124,10 @@ Unit Tests
 Run unit tests to ensure code integrity and reliability:
 
 ```
+
 npm run test
 
-````
+```
 
 Deplo1yment
 Vercel (Frontend and Backend)
@@ -171,23 +172,24 @@ Common Issues and Troubleshooting
 
 Address common issues with ease using our troubleshooting guide:
 
-  Database Connection Error:
-      Ensure your PostgreSQL URI is correct and the database server is running.
-  Environment Variables Not Loaded:
-      Double-check the .env file for correct variable names and values.
-  Port Conflicts:
-      Ensure that the ports defined in your .env file are not in use by other applications.
+Database Connection Error:
+-Ensure your PostgreSQL URI is correct and the database server is running.
+-Environment Variables Not Loaded:
+-Double-check the .env file for correct variable names and values.
+-Port Conflicts:
+-Ensure that the ports defined in your .env file are not in use by other applications.
 
 ##Contributing
 
 We welcome contributions from the community to enhance the Job Board Platform. Follow these steps to contribute:
 
-  Fork the repository.
-  ```Create a new branch (git checkout -b feature/your-feature).
+Fork the repository.
+```Create a new branch (git checkout -b feature/your-feature).
   Commit your changes (git commit -am 'Add new feature').
   Push to the branch (git push origin feature/your-feature).
   Create a new Pull Request.
-```
+````
+
 ##License
 
 The Job Board Platform is licensed under the MIT License. See the LICENSE file for more information.
@@ -198,4 +200,7 @@ For inquiries or feedback, please contact:
 -Khalid Hossain Badhon
 -Email: dev.khalidhossain@gmail.com
 -GitHub: badhon252
-````
+
+```
+
+```
