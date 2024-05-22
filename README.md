@@ -54,40 +54,40 @@ Ensure you have the following prerequisites installed on your system:
 1. **Clone the repository**:
 
    ```
-   git clone https://github.com/your-username/job-board-platform.git
-   cd job-board-platform
-
-    Install dependencies:
-
+   git clone https://github.com/badhon252/talentflow.git
    ```
 
-npm install
+   cd job-board-platform
+
+   Install dependencies:
+
+`npm install`
 
 Set up environment variables:
 Create a .env file in the root directory with the following variables:
 
 makefile
 
-DATABASE_URL=your_postgresql_url
-JWT_SECRET=your_jwt_secret
+````DATABASE_URL=your_postgresql_url
+JWT_SECRET=your_jwt_secret ```
 
 Set up the database:
 
-sh
 
-npx prisma migrate dev --name init
-npx prisma db seed
+```npx prisma migrate dev --name init
+npx prisma db seed```
 
 Start the development server:
 
-` npm run dev`
+``` npm run dev```
 
-    The application should now be running on http://localhost:3000.
+    The application should now be running on http://localhost:3000/
 
 ##Project Structure
 
 The project adheres to a structured organization to ensure maintainability and scalability:
 
+```
 job-board-platform/
 ├── prisma/ # Prisma schema and migrations
 ├── public/ # Public assets
@@ -104,8 +104,9 @@ job-board-platform/
 ├── jest.config.js # Jest configuration
 ├── next.config.js # Next.js configuration
 └── ... # Other root-level directories and files
+```
 
-Usage
+###Usage
 
     Register and Login:
         Navigate to the registration page to create an account as an employer or candidate.
@@ -122,9 +123,10 @@ Unit Tests
 
 Run unit tests to ensure code integrity and reliability:
 
-```npm run test
-
 ```
+npm run test
+
+````
 
 Deplo1yment
 Vercel (Frontend and Backend)
@@ -144,7 +146,9 @@ Screenshots
 Get a glimpse of the platform's sleek interface and powerful features through our curated screenshots.
 
 ##API Documentation
+
 Endpoints
+
 ###User Authentication
 
 ````POST /api/auth/register - Register a new user
@@ -179,11 +183,11 @@ Address common issues with ease using our troubleshooting guide:
 We welcome contributions from the community to enhance the Job Board Platform. Follow these steps to contribute:
 
   Fork the repository.
-  Create a new branch (git checkout -b feature/your-feature).
+  ```Create a new branch (git checkout -b feature/your-feature).
   Commit your changes (git commit -am 'Add new feature').
   Push to the branch (git push origin feature/your-feature).
   Create a new Pull Request.
-
+```
 ##License
 
 The Job Board Platform is licensed under the MIT License. See the LICENSE file for more information.
